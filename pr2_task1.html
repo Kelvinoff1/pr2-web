@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical work №2</title>
+</head>
+<body>
+   <form action="/action_page.php" method="post">
+        <fieldset>
+            <legend>Персональна інформація</legend>
+
+            <label for="name">Name<span style="color:red">*</span></label><br>
+            <input type="text" id="name" name="name" placeholder="your name" required><br><br>
+            
+            <label for="email">Email<span style="color:red">*</span></label><br>
+            <input type="email" id="email" name="email" placeholder="your email" required><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Додаткова інформація</legend>
+            
+            <label>Стать<span style="color:red">*</span></label><br>
+            <input type="radio" id="male" name="sex" value="Чоловік" required>
+            <label for="male">Чоловік</label><br>
+
+            <input type="radio" id="female" name="sex" value="Жінка">
+            <label for="female">Жінка</label><br><br>
+
+            <label>Поточний статус</label><br>
+            <input type="checkbox" id="student" name="current_status" value="Студент">
+            <label for="student">Студент</label><br>
+
+            <input type="checkbox" id="employee" name="current_status" value="Працівник">
+            <label for="employee">Працівник</label><br>
+
+            <input type="checkbox" id="unemployed" name="current_status" value="Безробітний">
+            <label for="unemployed">Безробітний</label><br><br>
+
+            <label for="birthday">Дата народження<span style="color:red">*</span></label><br>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+
+            <label for="skills">Навички та технології<span style="color:red">*</span></label><br>
+            <select id="skills" name="skills_and_technology[]" multiple size="7" required>
+                <optgroup label="Tech skills">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="aspdotnet">ASP.NET</option>
+                </optgroup>
+                <optgroup label="Soft skills">
+                    <option value="time_management">Тайм-менеджмент</option>
+                    <option value="team_work">Командна робота</option>
+                    <option value="leadership">Лідерство</option>
+                </optgroup>
+            </select><br><br>
+
+            <label for="experience">Досвід (в роках)</label><br>
+            <input type="number" id="experience" name="experience" step="0.5" min="0" max="25">
+            <label>років</label><br><br>
+
+            <label for="photo">Фотографія</label><br>
+            <input type="file" id="photo" name="photo"><br><br>
+            
+            <label for="comment">Коментарій</label><br>
+            <textarea id="comment" name="comment" rows="10" cols="30"></textarea>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Відправити">
+        <input type="reset" value="Скинути">
+   </form>
+</body>
+</html>
